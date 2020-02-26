@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
+
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<title>Formulário para o Retiro de Jovens 2020 da IBASP</title>
+	<link rel="shortcut icon" href="https://www.ibasp.org.br/wp-content/uploads/2018/10/cropped-logo_512x512-4-32x32.png"
+		type="image/x-icon" />
 </head>
 
 <style>
 
-	html {
+	body {
+		margin: 0;
+		padding: 0;
+
 		background-color: #050544;
-		/*background-image: url(https://source.unsplash.com/x9I-6yoXrXE/6000x4000); */
-		/*background-image: url(https://source.unsplash.com/1azAjl8FTnU/3437x4931); */
-		/*background-image: url(https://source.unsplash.com/63Znf38gnXk/3648x5472); */
 		background-image: url(https://source.unsplash.com/63Znf38gnXk/912x1368);
 		background-repeat: no-repeat;		
 		background-attachment: fixed;
-		/*background-size: 100vw auto; */
-    width: 100%;
-    height: 100vh;
 		background-size: cover;
 		background-position: 50% 85%;
-		font-family: Montserrat, Helvetica;
+		
+		width: 100%;
+		height: 100vh;
+		font-family: Montserrat, Helvetica, sans-serif;
+		
 		color: lightgray;
 	}	
-	/*@media screen and (max-aspect-ratio: 912/1368) {
-		html {
-			background-size: auto 100vh;
-			background-position: center top;
-		}
-	}*/
-/*	@media screen and (max-height: 800px) {
-		html {
-			background-size: 100vw auto;
-			background-position: 50% 85%;
-		}
-	}*/
 
 	h1 {
 		text-align: center;
@@ -59,23 +53,18 @@
 	}
 
 	form {
-		background-color: rgba(0,0,0,0.3);
+		background-color: rgba(0,0,0,0.7);
 
 		position: relative;
-		width: 55vw;
-		padding: 40px;
-		padding-top: 0;
-		padding-bottom: 20px;
-			
+		width: 100%;
+		max-width: 800px;
+
+		padding: 0 40px 20px;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-	@media (max-width: 430px) {
-		form {
-			width: 300px;
-		}
-	}
+	}	
 
 	input {
 		height: 1.5em;
@@ -85,14 +74,14 @@
 		font-weight: 800;
 		display: flex;
 		align-items: center;
+		margin-top: 10px;
+		margin-bottom: 5px;
 	}
 
 	button {
 		position: relative;
-		/*left: 50%;*/
-		/*width: 100px;*/
 		height: 35px;
-
+		margin-top: 20px;
 	}
 
 	select {
@@ -104,10 +93,16 @@
 		margin-top: 10px;
 	}
 
-	.radio, .checkbox {
+	.radio, 
+	.checkbox {
 		position: relative;
 		display: flex;
 		flex-direction: column;
+	}
+
+	.radio label,
+	.checkbox label {
+		margin: 0;
 	}
 
 	#description {
@@ -118,16 +113,28 @@
 		margin-top: auto;
 		margin-bottom: 30px;
 		text-shadow: 2px 2px #101010;
-		text-shadow
+	}
+
+	@media (max-width: 430px) {
+		form {
+			width: 300px;
+			/* para tamanhos mobile, sempre use 100% e margin */
+			margin: 0 10px;
+			width: calc(100% - 20px);
+			/* 20px = 10px margin esquerda e 10px margin direita */
+		}
 	}
 
 </style>
 
 <body>
-	<!-- User Story #1:  I can see a title with id="title" in H1 sized text. -->
-	<h1 id="title">Formulário Retiro de Jovens IBASP 2020</h1>
-	<!-- TODO --> <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
-	<p id="description">Opine para curtir um Retiro com a sua cara!</p>
+	<header>
+		<!-- User Story #1:  I can see a title with id="title" in H1 sized text. -->
+		<h1 id="title">Formulário Retiro de Jovens IBASP 2020</h1>
+		<!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
+		<p id="description">Opine para curtir um Retiro com a sua cara!</p>
+	</header>
+
 	<main>
 
 		<!-- User Story #3: I can see a form with id="survey-form". -->
@@ -135,14 +142,14 @@
 			<!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name". -->
 			<!-- User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label". -->
 			<!-- User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field. -->
-			<p id="name-label">Nome</p>			
+			<label id="name-label" for="name">Nome</label>
 			<input id="name" type="text" placeholder="Escreva seu nome" required>
 
 			<!-- User Story #5: Inside the form element, I am required to enter an email in a field with id="email". -->
 			<!-- User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. -->
 			<!-- User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label". -->
 			<!-- User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field. -->
-			<p id="email-label">Email</p>
+			<label id="email-label" for="email">E-mail</label>
 			<input id="email" type="email" placeholder="Escreva seu email" required>
 
 			<!-- User Story #7: Inside the form, I can enter a number in a field with id="number". -->
@@ -150,11 +157,11 @@
 			<!-- User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. -->
 			<!-- User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label". -->
 			<!-- User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field. -->
-			<p id="number-label">Idade</p>
+			<label id="number-label" for="number">Idade</label>
 			<input id="number" min="13" max="80" type="number" placeholder="Escreva sua idade">
 
 			<!-- User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". -->			
-			<p id="number-label">Como você gostaria que fossem distribuídas as preleções?</p>
+			<label id="dropdown-label" for="dropdown">Como você gostaria que fossem distribuídas as preleções?</label>
 			 <select id="dropdown" name="dropdown">
 				<option value="select" selected>Selecione uma opção</option>
 				<option value="morning">Apenas de manhã</option>
@@ -184,12 +191,10 @@
 			</div>
 
 			<!-- User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. -->
-			<p>Nos ajude deixando comentários e sugestões :)</p>
-			
-			 <label for="text-area"><textarea id="text-area" rows="4"> </textarea> </label>
-		
+			<p>Comentários</p>			
+			<textarea id="text-area" rows="4"
+				placeholder="Nos ajude deixando comentários e sugestões :) (opcional)"></textarea>
 
- 			<p> </p>
  			<!-- User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
 			<button id="submit" type="submit">Enviar</button>
 		</form>
