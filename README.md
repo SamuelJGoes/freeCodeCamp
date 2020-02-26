@@ -4,7 +4,7 @@ This repository contain the projects implemented during the [freeCodeCamp](https
 
 **These are the courses and projects**
 * Responsive Web Design Certification (300 hours)
-    - Tribute Page
+    - [Tribute Page](https://codepen.io/samueljgoes/pen/ZEGeqmL)
     - [Survey Form](https://codepen.io/samueljgoes/pen/abOJYXM)
     - Product Landing Page
     - Technical Documentation Page
