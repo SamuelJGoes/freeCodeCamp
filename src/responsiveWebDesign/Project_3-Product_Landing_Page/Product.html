@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet" type="text/css">	
+	<title>Marteletes Makita</title>
+
+</head>
+
+<style>
+
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Play, Helvetica, sans-serif;
+		text-align: center;
+
+		background-color: #F3F3F3;
+	}
+
+	header {
+		/*User Story #13: The navbar should always be at the top of the viewport.*/
+		position: fixed;
+		z-index: 1;
+		width: 100%;
+
+		background-color: #09838D;
+	}
+
+	h2 {
+		margin-top: 30px;
+	}
+
+	ul {
+		position: relative;
+		margin: 30px 0 30px 0;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	main {
+		padding-top: 150px;
+		padding-bottom: 50px;
+	}
+
+
+	iframe {
+		position: relative;
+		margin: auto:;
+		width: 100%;
+		height: 240px;
+	}
+
+	.nav-link{
+		color: #EFFFFF;
+		text-decoration: none;
+	}
+
+	.email-div {
+		float: right;
+		width: 30%;
+	}
+
+	.models-container {
+		position: relative;
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.model {
+		position: relative;
+		margin: auto;
+		width: 200px;
+		height: auto;		
+		margin: 10px;
+		padding-top: 5px;
+
+		background-color: white;
+
+		border-color: lightgray;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 10px;
+	}
+
+	.model-link {
+		color: gray;
+		font-weight: bold;
+		text-decoration: none;		
+	}
+
+	.img-box {
+		width: 100%;
+		height: auto;
+		margin-top: 5px;
+		padding-top: 10px;
+		border-top-style: solid;		
+		border-top-width: 1px;
+		border-top-color: lightgray;
+	}
+
+	#header-img {
+		float: left;
+	}
+
+	#nav-bar {
+		height: 100%;
+		margin-right: 10px;
+		float: right;
+		text-align: right;
+	}
+
+	#submit {
+		font-size: 20px;
+		color: #F3F3F3;
+
+		background-color: #09838D;
+
+		border-color: lightgray;
+		border-radius: 5px;
+	}
+
+	/*User Story #14: My product landing page should have at least one media query.	*/
+	@media (min-width: 426px) {
+		iframe {
+			width: 426px;
+		}
+	}
+	@media (min-width: 660px) {
+		.models-container {
+			flex-direction: row;
+		}
+	}
+
+</style>
+
+<body>
+	<!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
+	<header id="header">
+		<!-- User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+		<a href="http://www.makita.com.br/" target="_blank"><img id="header-img" src="https://i.pinimg.com/236x/18/7d/50/187d50f522c2639d5af76d3de167d998.jpg" alt="Logo Makita"></a>
+
+		<!-- User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar". -->
+		<nav id="nav-bar">
+			<!-- User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link. -->
+			<!-- User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+			<ul>
+				<li>
+					<a class="nav-link" href="#models">MODELOS</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#video">VÍDEO</a>
+				</li>
+				<li>
+					<a class="nav-link" href="#form">CADASTRO</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Marteletes Makita</h1>
+		<p>O martelete é uma ferramenta muito utilizada em ambientes de construção e reforma, atuando na demolição e perfuração de colunas de concreto, vigas e pisos.</p>
+		<p>
+		<p>A Makita traz diversas opções de marteletes de alta qualidade com recursos que se adequam às suas necessidades.</p>
+
+
+		<!-- User Story #15: My product landing page should utilize CSS flexbox at least once. -->
+		<h2>Veja alguns modelos</h2>
+		<div id="models" class=models-container>			
+			<a class="model-link" href="http://www.makita.com.br/produtos/produto.asp?cod=HR166DZ&l=12" target="_blank">
+				<div class="model">
+					<label>HR166DZ</label>
+					<img class="img-box" src="http://www.makita.com.br/imagens/produtos/HR166DZ.jpg">
+				</div>
+			</a>
+			<a class="model-link" href="http://www.makita.com.br/produtos/produto.asp?cod=HR2470A&l=1" target="_blank">
+				<div class="model">
+					<label>HR2470A</label>
+					<img class="img-box" src="http://www.makita.com.br/imagens/produtos/HR2470A.jpg">
+				</div>
+			</a>
+			<a class="model-link" href="http://www.makita.com.br/produtos/produto.asp?cod=HR2475&l=1" target="_blank">
+				<div class="model">
+					<label>HR2475</label>
+					<img class="img-box" src="http://www.makita.com.br/imagens/produtos/HR2475.jpg">
+				</div>
+			</a>
+		</div>
+
+		<!-- User Story #6: I can watch an embedded product video with id="video". -->
+		<h2>Como Funciona</h2>
+		<p>Entenda mais sobre seu funcionamento no vídeo abaixo</p>
+		<iframe id="video" src="https://www.youtube-nocookie.com/embed/C6FaoRXou1Y">
+		</iframe>
+
+		<!-- <div class="email-div"> -->
+			<!-- User Story #7: My landing page has a form element with a corresponding id="form". -->
+			<h2>Receba novidades através do seu email</h2>
+			<p>Gostou dessas informações e gostaria de receber alertas de novos conteúdos através do seu email? Cadastre-se agora e receba as novidade.
+			<form id="form">
+				<!-- User Story #8: Within the form, there is an input field with id="email" where I can enter an email address. -->
+				<!-- User Story #9: The #email input field should have placeholder text to let the user know what the field is for. -->
+				<!-- User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+				<input id="email" type="email" style="font-size: 15px;" placeholder="Escreva seu email"/>
+				<!-- User Story #11: Within the form, there is a submit input with a corresponding id="submit". -->
+				<input id="submit" type="button" value="Enviar">
+			</form>
+
+		<!-- </div> -->
+		
+	</main>
+
+</body>
+
+</html>
